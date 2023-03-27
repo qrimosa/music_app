@@ -15,7 +15,10 @@ def create_button(master, text = "", width = 61, height = 58, border_width = 4, 
     )
     return button
 
-bt_skip = create_button(master= m_app.app)
+label_image = ctk.CTkLabel(master = m_app.app, text = "назва треку що грає")
+label_image.place(x = 341, y = 40, anchor = ctk.CENTER)
+
+bt_skip = create_button(master = m_app.app)
 bt_skip.place(x = 288, y = 165, anchor = ctk.CENTER)
 
 bt_return = create_button(master = m_app.app)   
