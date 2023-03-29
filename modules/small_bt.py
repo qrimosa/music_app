@@ -41,7 +41,7 @@ def image_finder6():
         size = (61, 58)
     )
 
-def create_button(master, img, text = "", width = 61, height = 58, border_width = 4, corner_radius = 15, border_color = "#4CB7CE"):
+def create_button(master, img, text = "", width = 1, height = 8, border_width = 4, corner_radius = 15, border_color = "#4CB7CE"):
     button = ctk.CTkButton(
         master = master,
         image = img,
@@ -56,26 +56,24 @@ def create_button(master, img, text = "", width = 61, height = 58, border_width 
     )
     return button
 
-label_image = ctk.CTkLabel(master = m_app.app, text = "назва треку що грає")
-label_image.place(x = 341, y = 40, anchor = ctk.CENTER)
 
 bt_skip = create_button(master = m_app.app, img = image_finder6())
-bt_skip.place(x = 288, y = 165, anchor = ctk.CENTER)
+bt_skip.place(x = 305, y = 175, anchor = ctk.CENTER)
 
 bt_return = create_button(master = m_app.app, img = image_finder5())   
-bt_return.place(x = 396, y = 165, anchor = ctk.CENTER) 
+bt_return.place(x = 406, y = 175, anchor = ctk.CENTER) 
 
 bt_sound_decrease = create_button(master = m_app.app, img = image_finder3())
-bt_sound_decrease.place(x = 396, y = 396, anchor = ctk.CENTER) 
+bt_sound_decrease.place(x = 406, y = 406, anchor = ctk.CENTER) 
 
 bt_sound_increase = create_button(master = m_app.app, img = image_finder4())
-bt_sound_increase.place(x = 303, y = 396, anchor = ctk.CENTER)
+bt_sound_increase.place(x = 313, y = 406, anchor = ctk.CENTER)
 
 bt_delete = create_button(master = m_app.app, img = image_finder1())
-bt_delete.place(x = 131, y = 396, anchor = ctk.CENTER)
+bt_delete.place(x = 141, y = 406, anchor = ctk.CENTER)
 
 bt_add = create_button(master = m_app.app, img = image_finder0())
-bt_add.place(x = 45, y = 396, anchor = ctk.CENTER)
+bt_add.place(x = 55, y = 406, anchor = ctk.CENTER)
 
 bt_mix = create_button(master = m_app.app, img = image_finder2())
-bt_mix.place(x = 217 , y = 396 , anchor = ctk.CENTER)
+bt_mix.place(x = 228 , y = 406 , anchor = ctk.CENTER)

@@ -23,7 +23,7 @@ def image_finder2():
         size = (160, 58)
     )
 
-def create_button(master, img, text = "", width = 140, height= 50, border_width= 4, corner_radius = 15, border_color = "#4CB7CE"):
+def create_button(master, img, text = "", width = 1, height= 5, border_width= 4, corner_radius = 15, border_color = "#4CB7CE"):
     button = ctk.CTkButton(
         master = master,
         image = img,
@@ -39,10 +39,10 @@ def create_button(master, img, text = "", width = 140, height= 50, border_width=
     return button 
 
 bt_play = create_button(master= m_app.app, img= image_finder1())
-bt_play.place(x = 341, y = 85, anchor = ctk.CENTER)
+bt_play.place(x = 356, y = 95, anchor = ctk.CENTER)
 
 bt_pause = create_button(master= m_app.app, img= image_finder0())
-bt_pause.place(x = 341, y = 243, anchor = ctk.CENTER)
+bt_pause.place(x = 356, y = 253, anchor = ctk.CENTER)
 
 bt_stop = create_button(master= m_app.app, img= image_finder2())
-bt_stop.place(x = 341, y = 323, anchor = ctk.CENTER)
+bt_stop.place(x = 356, y = 333, anchor = ctk.CENTER)
