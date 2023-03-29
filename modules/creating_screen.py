@@ -10,9 +10,9 @@ class App(ctk.CTk):
         self.SCREEN_HEIGHT = self.winfo_screenheight()
         self.geometry(f"{self.APP_WIDTH}x{self.APP_HEIGHT}+{0}+{0}")
         self.resizable(False, False)
-        self.title("Music Play")
-        # self._fg_color = ("white")
-        self.FRAME = m_frame.My_Frame(text = "Назва треків що додано", master = self, width = 233 , height = 315 , border_width = 5, corner_radius = 15)
-        self.FRAME.place(x = 130, y = 195, anchor = ctk.CENTER)
+        self.title("Ждём зарплату день 999999")
+        self._fg_color = ("#4CB7CE")
+        self.FRAME = m_frame.My_Frame(text = "Назва треків що додано", master = self, width = 233 , height = 335 , border_width = 5, corner_radius = 15)
+        self.FRAME.place(x = 120, y = 185, anchor = ctk.CENTER)
 
 app = App(454, 469)  
