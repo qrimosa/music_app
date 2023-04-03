@@ -32,8 +32,16 @@ def play():
 def stop():
     mixer.music.stop()
 
-def pause():
-    mixer.music.pause()
+pause = False
+def pause_music():
+    global pause
+    if pause != True:
+        mixer.music.pause()
+        pause = True
+    else:
+        mixer.music.unpause()
+        pause = False
+        
 
 def create_button(master, img, command, text = "", width = 1, height= 5, border_width= 4, corner_radius = 15, border_color = "#4CB7CE"):
     button = ctk.CTkButton(
@@ -54,7 +62,7 @@ def create_button(master, img, command, text = "", width = 1, height= 5, border_
 bt_play = create_button(master= m_app.app, img= image_finder1(), command = play)
 bt_play.place(x = 356, y = 95, anchor = ctk.CENTER)
 
-bt_pause = create_button(master= m_app.app, img= image_finder0(), command = pause)
+bt_pause = create_button(master= m_app.app, img= image_finder0(), command = pause_music)
 bt_pause.place(x = 356, y = 253, anchor = ctk.CENTER)
 
 bt_stop = create_button(master= m_app.app, img= image_finder2(), command = stop)
