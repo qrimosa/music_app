@@ -3,6 +3,7 @@ import modules.creating_screen as m_app
 import PIL
 import modules.find_path as m_path
 from pygame import mixer
+import modules.creating_list_frame as m_listbox
 
 mixer.init()
 
@@ -27,10 +28,23 @@ def image_finder2():
     )
 
 def play():
+    # первый вариант кнопки плей
+    # m_listbox.song_label.configure(text = m_listbox.listbox.get("anchor"))
+    # mixer.music.load(m_listbox.rootpath + "\\" + m_listbox.listbox.get("anchor")) !!!без этой строки!!!
+    # mixer.music.load(m_listbox.listbox.get("active"))
+    # mixer.music.play
+    
+    # второй вариант кнопки плей
+    file = m_listbox.listbox.curselection()
+    filename = m_listbox.listbox.get(file)
+    mixer.music.load(filename)
+    m_listbox.song_label.configure(text = filename)
     mixer.music.play()
 
 def stop():
     mixer.music.stop()
+    m_listbox.listbox.select_clear("active")
+    m_listbox.song_label.configure(text = "")
 
 pause = False
 def pause_music():
@@ -54,7 +68,7 @@ def create_button(master, img, command, text = "", width = 1, height= 5, border_
         border_color = border_color,
         text = text,
         fg_color= "transparent",
-        hover_color = "lightblue",
+        hover= False,
         command = command
     )
     return button 
