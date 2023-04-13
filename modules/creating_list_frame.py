@@ -19,7 +19,7 @@ listbox.place(x = 135, y = 193, anchor = ctk.CENTER)
 song_label = ctk.CTkLabel(master = m_app.app, text = "", text_color = "black", font = ("impact", 22))
 song_label.place(x = 351, y = 40, anchor = ctk.CENTER)
 
-for root, dirs, files in os.walk(rootpath):
-    for filename in fnmatch.filter(files, pattern):
-        listbox.insert("end", filename)
+# for root, dirs, files in os.walk(rootpath):
+#     for filename in fnmatch.filter(files, pattern):
+#         listbox.insert("end", filename)
 

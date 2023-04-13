@@ -7,7 +7,7 @@ from pygame import mixer
 from tkinter import filedialog
 import modules.creating_list_frame as m_listbox
 # import fnmatch
-# import os
+import os
 
 volume = 0.5
 mixer.init()
@@ -87,20 +87,20 @@ def delete_music():
     m_listbox.song_label.configure(text = "")
     mixer.music.stop()
 
-def add_music():
-    path = filedialog.askopenfilename()
-    if path:
-        abc = path.split("/")
-        m_listbox.listbox.insert("end", abc[-1])
-            
 # def add_music():
-#     path = filedialog.askdirectory()
+#     path = filedialog.askopenfilename()
 #     if path:
-#         os.chdir(path)
-#         songs = os.listdir(path)
-#         for song in songs:
-#             if song.endswith(".mp3"):
-#                 m_listbox.listbox.insert("end", song)
+#         abc = path.split("/")
+#         m_listbox.listbox.insert("end", abc[-1])
+            
+def add_music():
+    path = filedialog.askdirectory()
+    if path:
+        os.chdir(path)
+        songs = os.listdir(path)
+        for song in songs:
+            if song.endswith(".mp3"):
+                m_listbox.listbox.insert("end", song)
 
 def skip_track():
     try:

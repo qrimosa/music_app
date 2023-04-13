@@ -7,7 +7,7 @@ import modules.creating_list_frame as m_listbox
 
 mixer.init()
 
-list_big_images = ["images/pause.png", "images/play.png", "images/stop.png",]
+list_big_images = ["images/pause.png", "images/play.png", "images/stop.png"]
 
 def image_finder0():
     return ctk.CTkImage(
